@@ -6,15 +6,10 @@ public class EnemyCombat : MonoBehaviour
 {
     public int damage = 1;
     public Transform attackPoint;
-    public float weaponRange = 1;   // 武器攻击范围
+    public float weaponRange = 1;       // 武器攻击范围
+    public float knockbackForce = 8;    // 击退力
+    public float stunTime = 0.3f;       // 击退时间(秒)
     public LayerMask playerLayer;
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<PlayerHealth>().ChangeHealth(-damage);
-        }
-    }
 
     public void Attack()
     {
@@ -23,6 +18,7 @@ public class EnemyCombat : MonoBehaviour
         if (hits.Length > 0)
         {
             hits[0].GetComponent<PlayerHealth>().ChangeHealth(-damage);
+            hits[0].GetComponent<PlayerMovement>().Knockback(transform, knockbackForce, stunTime);
         }
     }
 }

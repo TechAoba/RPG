@@ -4355,8 +4355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81bfd40a4b9643c2a8cd01f6165078a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 3
-  maxHealth: 3
+  currentHealth: 10
+  maxHealth: 10
   healthText: {fileID: 1326883564}
   healthTextAnim: {fileID: 1326883566}
 --- !u!1 &1094286808
@@ -4787,6 +4787,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 505852911}
+  - {fileID: 1602073460}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1572624692
@@ -4859,6 +4860,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   attackRange: 1.2
+  attackCooldown: 2
+  playerDetectRange: 5
+  detectionPoint: {fileID: 1602073460}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &1572624695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4873,7 +4880,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   attackPoint: {fileID: 505852911}
-  weaponRange: 1
+  weaponRange: 0.8
+  knockbackForce: 8
+  stunTime: 0.3
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -5738,6 +5747,37 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &1602073459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1602073460}
+  m_Layer: 0
+  m_Name: DetectionPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1602073460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602073459}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.54, y: -0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1572624689}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1665304860
 GameObject:
   m_ObjectHideFlags: 0
@@ -13931,7 +13971,7 @@ Tilemap:
       - {fileID: -574445851, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -189210672, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: 572865638, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -14, y: -2, z: 0}
@@ -14201,7 +14241,7 @@ Tilemap:
       - {fileID: 528408334, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: 1229937872, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: 1200943984, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 21, y: 5, z: 0}
