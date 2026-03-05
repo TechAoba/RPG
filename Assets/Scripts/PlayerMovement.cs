@@ -9,9 +9,18 @@ public class PlayerMovement : MonoBehaviour
     public int facingDirection = 1;
     public Rigidbody2D rb;
     public Animator anim;
+    public PlayerCombat playerCombat;
 
     private bool isKnockBack = false;
-    
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Slash"))
+        {
+            playerCombat.Attack();
+        }
+    }
+
     // FixedUpdate is called 50x frame
     void FixedUpdate()
     {
