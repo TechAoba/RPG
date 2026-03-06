@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2164245658345335224}
   - component: {fileID: 7119346920273333758}
   - component: {fileID: 1078341250548971240}
+  - component: {fileID: 4786351764511298639}
   m_Layer: 0
   m_Name: SkillButton
   m_TagString: Untagged
@@ -117,11 +118,30 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 7119346920273333758}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4786351764511298639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060151550738659299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb76a845794346c89590668d679760e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prerequisiteSkillSlots: []
+  skillSO: {fileID: 11400000, guid: 475a970c05cf34b4ea86bd6b0fab3a09, type: 2}
+  currentLevel: 0
+  isUnlocked: 0
+  skillIcon: {fileID: 2432917728521047231}
+  skillLevelText: {fileID: 9030116790302260579}
+  skillButton: {fileID: 1078341250548971240}
 --- !u!1 &2160644816854431497
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +177,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -20, y: 5}
-  m_SizeDelta: {x: 40, y: 10}
+  m_SizeDelta: {x: 60, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1318240644867646558
 CanvasRenderer:
@@ -187,7 +207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/5
+  m_text: Locked
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -390,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
