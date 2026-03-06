@@ -771,7 +771,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1625941032}
   m_HandleRect: {fileID: 0}
@@ -4774,6 +4774,8 @@ GameObject:
   - component: {fileID: 757983413}
   - component: {fileID: 757983416}
   - component: {fileID: 757983417}
+  - component: {fileID: 757983418}
+  - component: {fileID: 757983419}
   m_Layer: 0
   m_Name: SkillsCanvas
   m_TagString: Untagged
@@ -4872,9 +4874,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757983411}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &757983417
 MonoBehaviour:
@@ -4915,6 +4917,32 @@ MonoBehaviour:
   - {fileID: 822856250}
   pointsText: {fileID: 1329865747}
   availablePoints: 10
+--- !u!114 &757983418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757983411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d5f7c474d01240c1a949a4b56bf8ec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combat: {fileID: 1017920765}
+--- !u!114 &757983419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757983411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6417794eb224737b7636734f348757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsCanvas: {fileID: 757983416}
 --- !u!1001 &766462164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5490,7 +5518,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867653008}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -6867,7 +6895,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017920757}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc32ad8f637fd4b369ea08ee0b4282fd, type: 3}
   m_Name: 
@@ -11317,6 +11345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a0d7d7b8b764a5bb588eaf22cf36d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthText: {fileID: 1326883564}
   damage: 1
   weaponRange: 0.8
   knockbackForce: 20
@@ -18948,7 +18977,7 @@ Tilemap:
       - {fileID: -2115219494, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1007661400, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: 1416685073, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 8, y: -8, z: 0}
@@ -19248,7 +19277,7 @@ Tilemap:
       - {fileID: -2115219494, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1007661400, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: 1416685073, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 23, y: 2, z: 0}
@@ -19413,7 +19442,7 @@ Tilemap:
       - {fileID: 528408334, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: 1229937872, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: 1200943984, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 21, y: 9, z: 0}
@@ -20271,7 +20300,7 @@ PrefabInstance:
     - target: {fileID: 4786351764511298639, guid: fcabdf5ae472b48d8a4f1b1001d6c562, type: 3}
       propertyPath: skillSO
       value: 
-      objectReference: {fileID: 11400000, guid: 475a970c05cf34b4ea86bd6b0fab3a09, type: 2}
+      objectReference: {fileID: 11400000, guid: a0791dc64c4664cd7bdcd1a2dd66610c, type: 2}
     - target: {fileID: 4786351764511298639, guid: fcabdf5ae472b48d8a4f1b1001d6c562, type: 3}
       propertyPath: isUnlocked
       value: 1

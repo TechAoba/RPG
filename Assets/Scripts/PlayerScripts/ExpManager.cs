@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,8 @@ public class ExpManager : MonoBehaviour
     public float expGrowthMultiplier = 1.2f;    // 每级升级经验增加20%
     public Slider expSlider;
     public TMP_Text currentLevelText;
+
+    public static event Action<int> OnLevelUp;
 
     private void Start()
     {
@@ -50,6 +53,7 @@ public class ExpManager : MonoBehaviour
         ++level;
         currentExp -= expToLevel;
         expToLevel = Mathf.RoundToInt(expToLevel * expGrowthMultiplier);
+        OnLevelUp?.Invoke(1);
     }
 
     public void UpdateUI()
