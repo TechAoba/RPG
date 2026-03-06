@@ -6,7 +6,7 @@ public class EnemyCombat : MonoBehaviour
 {
     public int damage = 1;
     public Transform attackPoint;
-    public float weaponRange = 1;       // 武器攻击范围
+    public float weaponRange = 0.8f;       // 武器攻击范围
     public float knockbackForce = 8;    // 击退力
     public float stunTime = 0.3f;       // 击退时间(秒)
     public LayerMask playerLayer;
