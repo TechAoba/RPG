@@ -6,12 +6,15 @@ public class PlayerBow : MonoBehaviour
 {
     public Transform launchPoint;
     public GameObject arrowPrefab;
+    public PlayerMovement playerMovement;
     private Vector2 aimDirection = Vector2.right;
 
     public float shootCooldown = 0.5f;
     private float shootTimer;
 
-    // Update is called once per frame
+    public Animator anim;
+
+
     void Update()
     {
         shootTimer -= Time.deltaTime;
@@ -19,15 +22,24 @@ public class PlayerBow : MonoBehaviour
         HandleAiming();
         if (Input.GetButtonDown("Shoot") && shootTimer <= 0)
         {
-            Shoot();
+            playerMovement.isShooting = true;
+            anim.SetBool("isShooting", true);
         }
     }
 
-    public void Shoot()
+    private void OnEnable()
     {
-        Arrow arrow = Instantiate(arrowPrefab, launchPoint.position, Quaternion.identity).GetComponent<Arrow>();
-        arrow.direction = aimDirection;
-        shootTimer = shootCooldown;
+        // 设置第0层（战士层）为0
+        anim.SetLayerWeight(0, 0);
+        // 设置第1层（射手层）为1
+        anim.SetLayerWeight(1, 1);
+    }
+    private void OnDisable()
+    {
+        // 设置第0层（战士层）为1
+        anim.SetLayerWeight(0, 1);
+        // 设置第1层（射手层）为0
+        anim.SetLayerWeight(1, 0);
     }
 
     private void HandleAiming()
@@ -38,6 +50,22 @@ public class PlayerBow : MonoBehaviour
         if (horizontal != 0 || vertical != 0)
         {
             aimDirection = new Vector2(horizontal, vertical).normalized;
+            anim.SetFloat("aimX", aimDirection.x);
+            anim.SetFloat("aimY", aimDirection.y);
         }
     }
+
+    public void Shoot()
+    {
+        if (shootTimer <= 0) 
+        {
+            Arrow arrow = Instantiate(arrowPrefab, launchPoint.position, Quaternion.identity).GetComponent<Arrow>();
+            arrow.direction = aimDirection;
+            shootTimer = shootCooldown;
+        }
+        
+        anim.SetBool("isShooting", false);
+        playerMovement.isShooting = false;
+    }
+
 }
