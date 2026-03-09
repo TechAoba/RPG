@@ -11,7 +11,7 @@ public class PlayerChangeEquipment : MonoBehaviour
     {
         if (Input.GetButtonDown("ChangeEquipment"))
         {
-            // combat.enabled = !combat.enabled;
+            combat.enabled = !combat.enabled;
             bow.enabled = !bow.enabled;
         }
     }
