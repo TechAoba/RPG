@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class StatsManager : MonoBehaviour
 {
     public static StatsManager Instance;
+    public StatsUI statsUI;
     public TMP_Text healthText;
 
     [Header("Combat Stats")]
@@ -38,5 +40,17 @@ public class StatsManager : MonoBehaviour
     {
         maxHealth += amount;
         healthText.text = "HP: " + currentHealth + " / " + maxHealth;
+    }
+
+    public void UpdateHealth(int amount)
+    {
+        // 避免过量治疗
+        currentHealth = Math.Min(currentHealth + amount, maxHealth);
+        healthText.text = "HP: " + currentHealth + " / " + maxHealth;
+    }
+    public void UpdateSpeed(int amount)
+    {
+        speed += amount;
+        statsUI.UpdateAllStats();
     }
 }
