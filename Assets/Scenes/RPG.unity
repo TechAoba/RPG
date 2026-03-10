@@ -1229,6 +1229,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopManager
+      value: 
+      objectReference: {fileID: 1244530603}
     - target: {fileID: 6655389994401348496, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: m_Name
       value: ShopSlot (3)
@@ -1423,6 +1427,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopManager
+      value: 
+      objectReference: {fileID: 1244530603}
     - target: {fileID: 6655389994401348496, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: m_Name
       value: ShopSlot (5)
@@ -1781,6 +1789,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopManager
+      value: 
+      objectReference: {fileID: 1244530603}
     - target: {fileID: 6655389994401348496, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: m_Name
       value: ShopSlot (1)
@@ -5843,6 +5855,17 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &526410846 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+  m_PrefabInstance: {fileID: 256537181}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855d254f9539c40438b957f0028abbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &556072093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6575,6 +6598,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopManager
+      value: 
+      objectReference: {fileID: 1244530603}
     - target: {fileID: 6655389994401348496, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: m_Name
       value: ShopSlot (7)
@@ -7211,6 +7238,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopManager
+      value: 
+      objectReference: {fileID: 1244530603}
     - target: {fileID: 6655389994401348496, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: m_Name
       value: ShopSlot (4)
@@ -7225,6 +7256,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5033292039401838773, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
   m_PrefabInstance: {fileID: 756839298}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &756839300 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+  m_PrefabInstance: {fileID: 756839298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855d254f9539c40438b957f0028abbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &757983411
 GameObject:
   m_ObjectHideFlags: 0
@@ -7753,6 +7795,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopManager
+      value: 
+      objectReference: {fileID: 1244530603}
     - target: {fileID: 6655389994401348496, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: m_Name
       value: ShopSlot (6)
@@ -7767,6 +7813,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5033292039401838773, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
   m_PrefabInstance: {fileID: 793909552}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &793909554 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+  m_PrefabInstance: {fileID: 793909552}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855d254f9539c40438b957f0028abbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &796590992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7920,6 +7977,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopManager
+      value: 
+      objectReference: {fileID: 1244530603}
     - target: {fileID: 6655389994401348496, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: m_Name
       value: ShopSlot (2)
@@ -8045,6 +8106,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cb76a845794346c89590668d679760e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &842327221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+  m_PrefabInstance: {fileID: 820928797}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855d254f9539c40438b957f0028abbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &861314118
@@ -9689,6 +9761,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975289634}
   m_CullTransparentMesh: 1
+--- !u!114 &1001718706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+  m_PrefabInstance: {fileID: 644911244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855d254f9539c40438b957f0028abbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1017920757
 GameObject:
   m_ObjectHideFlags: 0
@@ -10438,6 +10521,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 633040053305862153, guid: d51842a4b3cbf441ba8f99fbeea05f77, type: 3}
   m_PrefabInstance: {fileID: 1204264756}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1244308435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+  m_PrefabInstance: {fileID: 313953828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855d254f9539c40438b957f0028abbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1244530597
 GameObject:
   m_ObjectHideFlags: 0
@@ -10451,6 +10545,7 @@ GameObject:
   - component: {fileID: 1244530599}
   - component: {fileID: 1244530598}
   - component: {fileID: 1244530602}
+  - component: {fileID: 1244530603}
   m_Layer: 5
   m_Name: ShopCanvas
   m_TagString: Untagged
@@ -10553,6 +10648,33 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1244530603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244530597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4831a90a76f34e19a38ea505fd85ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopItems:
+  - itemSO: {fileID: 11400000, guid: 792a7bcd8d6514039baf5dc7d9d008b2, type: 2}
+    price: 2
+  - itemSO: {fileID: 11400000, guid: ed69b26eb969a4973925dba881f62a56, type: 2}
+    price: 5
+  shopSlots:
+  - {fileID: 327945243440479819}
+  - {fileID: 1823420405}
+  - {fileID: 842327221}
+  - {fileID: 526410846}
+  - {fileID: 756839300}
+  - {fileID: 1244308435}
+  - {fileID: 793909554}
+  - {fileID: 1001718706}
+  inventoryManager: {fileID: 874417063}
 --- !u!1 &1244994162
 GameObject:
   m_ObjectHideFlags: 0
@@ -15739,6 +15861,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1463296212348031293, guid: ae94f3a4b24984220bd6edd31fe78a14, type: 3}
   m_PrefabInstance: {fileID: 495133929}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1823420405 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+  m_PrefabInstance: {fileID: 378478218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855d254f9539c40438b957f0028abbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1830002876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23811,7 +23944,7 @@ Tilemap:
       - {fileID: -601826821, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1947711085, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1604302585, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -13, y: -2, z: 0}
@@ -24096,7 +24229,7 @@ Tilemap:
       - {fileID: -574445851, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -189210672, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: 572865638, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 21, y: 8, z: 0}
@@ -25241,6 +25374,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopManager
+      value: 
+      objectReference: {fileID: 1244530603}
     - target: {fileID: 6655389994401348496, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: m_Name
       value: ShopSlot
@@ -25255,6 +25392,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5033292039401838773, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
   m_PrefabInstance: {fileID: 327945243440479817}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &327945243440479819 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+  m_PrefabInstance: {fileID: 327945243440479817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855d254f9539c40438b957f0028abbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &491073377778717347
 PrefabInstance:
   m_ObjectHideFlags: 0
