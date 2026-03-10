@@ -9,6 +9,8 @@ public class InventoryManager : MonoBehaviour
     public UseItem useItem;
     public int gold;
     public TMP_Text goldText;
+    public GameObject lootPrefab;
+    public Transform player;
 
     private void Start()
     {
@@ -35,19 +37,56 @@ public class InventoryManager : MonoBehaviour
             goldText.text = gold.ToString();
             return;
         }
-        else
+        // 遍历格子找到相同物品进行堆叠
+        foreach (var slot in itemSlots)
         {
-            foreach (var slot in itemSlots)
+            if (slot.itemSO == itemSO && slot.quantity < itemSO.stackSize)
             {
-                if (slot.itemSO == null)
-                {
-                    slot.itemSO = itemSO;
-                    slot.quantity = quantity;
-                    slot.UpdateUI();
+                int availableSpace = itemSO.stackSize - slot.quantity;
+                int amountToAdd = Mathf.Min(availableSpace, quantity);
+                slot.quantity += amountToAdd;
+                quantity -= amountToAdd;
+                // 更新UI
+                slot.UpdateUI();
+                if (quantity <= 0) 
                     return;
-                }
             }
         }
+        foreach (var slot in itemSlots)
+        {
+            if (slot.itemSO == null)
+            {
+                int amountToAdd = Mathf.Min(itemSO.stackSize, quantity);
+                quantity -= amountToAdd;
+                slot.itemSO = itemSO;
+                slot.quantity = amountToAdd;
+                slot.UpdateUI();
+                return;
+            }
+        }
+        if (quantity > 0)
+        {
+            DropLoot(itemSO, quantity);
+        }
+    }
+
+    public void DropItem(InventorySlot slot)
+    {
+        int dropCnt = 1;
+        dropCnt = Mathf.Min(dropCnt, slot.quantity);
+        DropLoot(slot.itemSO, dropCnt);
+        slot.quantity -= dropCnt;
+        if (slot.quantity <= 0)
+        {
+            slot.itemSO = null;
+        }
+        slot.UpdateUI();
+    }
+
+    private void DropLoot(ItemSO itemSO, int quantity)
+    {
+        Loot loot = Instantiate(lootPrefab, player.position, Quaternion.identity).GetComponent<Loot>();
+        loot.Initialize(itemSO, quantity);
     }
 
     public void UseItem(InventorySlot slot)
