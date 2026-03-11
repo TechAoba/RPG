@@ -1230,6 +1230,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopInfo
+      value: 
+      objectReference: {fileID: 584960110}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: shopManager
       value: 
       objectReference: {fileID: 1244530603}
@@ -1427,6 +1431,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopInfo
+      value: 
+      objectReference: {fileID: 584960110}
     - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: shopManager
       value: 
@@ -1789,6 +1797,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopInfo
+      value: 
+      objectReference: {fileID: 584960110}
     - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: shopManager
       value: 
@@ -6056,6 +6068,7 @@ GameObject:
   - component: {fileID: 584960109}
   - component: {fileID: 584960108}
   - component: {fileID: 584960107}
+  - component: {fileID: 584960110}
   m_Layer: 5
   m_Name: InfoPopup
   m_TagString: Untagged
@@ -6093,7 +6106,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584960105}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -6135,6 +6148,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584960105}
   m_CullTransparentMesh: 1
+--- !u!114 &584960110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584960105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cdeeff2997b9416fb18f86c58ec344a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoPanel: {fileID: 584960107}
+  itemNameText: {fileID: 451216753}
+  itemDescriptionText: {fileID: 1426230892}
+  statTexts: []
 --- !u!1001 &613761156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6598,6 +6627,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopInfo
+      value: 
+      objectReference: {fileID: 584960110}
     - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: shopManager
       value: 
@@ -7239,6 +7272,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopInfo
+      value: 
+      objectReference: {fileID: 584960110}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: shopManager
       value: 
       objectReference: {fileID: 1244530603}
@@ -7796,6 +7833,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopInfo
+      value: 
+      objectReference: {fileID: 584960110}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: shopManager
       value: 
       objectReference: {fileID: 1244530603}
@@ -7977,6 +8018,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopInfo
+      value: 
+      objectReference: {fileID: 584960110}
     - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: shopManager
       value: 
@@ -23944,7 +23989,7 @@ Tilemap:
       - {fileID: -601826821, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1947711085, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1604302585, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -13, y: -2, z: 0}
@@ -24079,7 +24124,7 @@ Tilemap:
       - {fileID: 528408334, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: 1229937872, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: 1200943984, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 22, y: 1, z: 0}
@@ -24229,7 +24274,7 @@ Tilemap:
       - {fileID: -574445851, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -189210672, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: 572865638, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 21, y: 8, z: 0}
@@ -24484,7 +24529,7 @@ Tilemap:
       - {fileID: -601826821, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1947711085, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1604302585, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 6, y: 13, z: 0}
@@ -25374,6 +25419,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
+      propertyPath: shopInfo
+      value: 
+      objectReference: {fileID: 584960110}
     - target: {fileID: 6165986792594415208, guid: 2b5103a0c480f407fa878554bf900c4d, type: 3}
       propertyPath: shopManager
       value: 
