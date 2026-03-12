@@ -22,11 +22,11 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
 
     private void OnEnable()
     {
-        ShopManager.OnShopStateChanged += HandleShopStateChanged;
+        ShopKeeper.OnShopStateChanged += HandleShopStateChanged;
     }
     private void OnDisable()
     {
-        ShopManager.OnShopStateChanged -= HandleShopStateChanged;
+        ShopKeeper.OnShopStateChanged -= HandleShopStateChanged;
     }
 
     private void HandleShopStateChanged(ShopManager shopManager, bool isOpen)
@@ -42,9 +42,11 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
             {
                 if (activateShop != null)
                 {
-                    activateShop.SellItem(itemSO);
-                    quantity -= 1;
-                    UpdateUI();
+                    if (activateShop.SellItem(itemSO))
+                    {
+                        quantity -= 1;
+                        UpdateUI();
+                    }
                 }
                 // 治疗物品，且生命值已是最大生命值
                 else {

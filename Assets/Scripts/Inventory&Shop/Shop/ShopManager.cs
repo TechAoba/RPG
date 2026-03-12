@@ -1,23 +1,19 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    public static event Action<ShopManager, bool> OnShopStateChanged;
-    [SerializeField] private List<ShopItems> shopItems;
     [SerializeField] private ShopSlot[] shopSlots;
     [SerializeField] private InventoryManager inventoryManager;
 
     private void Start()
     {
-        PopulateShopItems();
-        OnShopStateChanged?.Invoke(this, true);
+        
     }
 
     // 填充商店物品
-    public void PopulateShopItems()
+    public void PopulateShopItems(List<ShopItems> shopItems)
     {
         for (int i = 0; i < shopItems.Count && i < shopSlots.Length; i++)
         {
@@ -57,19 +53,20 @@ public class ShopManager : MonoBehaviour
         return false;
     }
 
-    public void SellItem(ItemSO itemSO)
+    public bool SellItem(ItemSO itemSO)
     {
         if (itemSO == null)
-            return;
+            return false;
         foreach (var slot in shopSlots)
         {
             if (slot.itemSO == itemSO)
             {
                 inventoryManager.gold += (int)(slot.price * 0.7);
                 inventoryManager.goldText.text = inventoryManager.gold.ToString();
-                return;
+                return true;
             }
         }
+        return false;
     }
 }
 
