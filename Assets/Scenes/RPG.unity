@@ -3830,6 +3830,7 @@ GameObject:
   - component: {fileID: 689248993}
   - component: {fileID: 689248992}
   - component: {fileID: 689248994}
+  - component: {fileID: 689248995}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -3922,7 +3923,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689248990}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 381bda3331da148d3a597933793511db, type: 3}
   m_Name: 
@@ -3931,6 +3932,25 @@ MonoBehaviour:
   - {x: -8, y: 7}
   - {x: -8, y: 10}
   - {x: -3, y: 8.5}
+  speed: 2
+  pauseDuration: 1.5
+--- !u!114 &689248995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689248990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a0f7cbd32f145b3863f934d3af5c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wanderWidth: 8
+  wanderHeight: 5
+  speed: 2
+  target: {x: -12, y: 8}
+  startingPosition: {x: -8, y: 7}
 --- !u!1 &714438620
 GameObject:
   m_ObjectHideFlags: 0
@@ -15928,7 +15948,7 @@ Tilemap:
       - {fileID: -601826821, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1947711085, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1604302585, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 8, y: -9, z: 0}
@@ -15988,7 +16008,7 @@ Tilemap:
       - {fileID: -601826821, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1947711085, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
       - {fileID: -1604302585, guid: 074a966d72a964f17855be1faa1ef343, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -13, y: -6, z: 0}
