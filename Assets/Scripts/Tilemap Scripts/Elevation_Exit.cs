@@ -10,7 +10,7 @@ public class Elevation_Exit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player") 
+        if (collision.CompareTag("Player")) 
         {
             foreach (Collider2D mountain in mountainColliders)
             {
