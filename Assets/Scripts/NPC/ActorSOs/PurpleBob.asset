@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1988243be3dc4c4e925891737d8443f, type: 3}
   m_Name: PurpleBob
   m_EditorClassIdentifier: 
-  actorName: Night Runner
-  portrait: {fileID: -313865730, guid: e6ea06faef09d4430935c9b8c7a6e255, type: 3}
+  actorName: Purple Bob
+  portrait: {fileID: -838962822, guid: dee27501a99174bbd95b9d084fa2a1db, type: 3}

@@ -7,6 +7,7 @@ public class NPC_Talk : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     public Animator interactAnim;
+    public DialogueSO dialogueSO;
 
     private void Awake()
     {
@@ -26,5 +27,20 @@ public class NPC_Talk : MonoBehaviour
     {
         interactAnim.Play("Close");
         rb.isKinematic = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Interact"))
+        {
+            if (DialogueManager.Instance.isDialogueActive)
+            {
+                DialogueManager.Instance.AdvanceDialogue();
+            }
+            else
+            {
+                DialogueManager.Instance.StartDialogue(dialogueSO);
+            }
+        }
     }
 }

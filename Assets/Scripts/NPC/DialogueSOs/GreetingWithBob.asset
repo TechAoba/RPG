@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e989a236a403f4f8aa438cfa9b19e9fa, type: 3}
   m_Name: GreetingWithBob
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - speaker: {fileID: 11400000, guid: d0c774a46faa44a259c60e3c0bd3131a, type: 2}
+    text: Hello, Night Runner!
+  - speaker: {fileID: 11400000, guid: d0c774a46faa44a259c60e3c0bd3131a, type: 2}
+    text: I heard you just released a new devlog for Willard, talking about animation!
+  - speaker: {fileID: 11400000, guid: 894cc6253d89f4a1291a4511e789914e, type: 2}
+    text: Sure did! You should check it out, Bob!

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1988243be3dc4c4e925891737d8443f, type: 3}
   m_Name: NightRunner
   m_EditorClassIdentifier: 
-  actorName: 
-  portrait: {fileID: 0}
+  actorName: Night Runner
+  portrait: {fileID: -313865730, guid: e6ea06faef09d4430935c9b8c7a6e255, type: 3}
